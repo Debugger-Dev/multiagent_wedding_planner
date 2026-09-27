@@ -17,7 +17,7 @@ from prompts import USER_PROMPT_FOR_MAIN_AGENT, WEDDING_PLANNER_AGENT_PROMPT
 
 APP_TITLE = "Multi-Agent Wedding Planner"
 MODEL_NAME = "openai/gpt-oss-20b"
-REQUIRED_KEYS = ("OPENAI_API_KEY", "TAVILY_API_KEY")
+REQUIRED_KEYS = ("GEMINI_API_KEY", "TAVILY_API_KEY")
 
 STYLE_OPTIONS = [
     "Modern",
@@ -622,7 +622,7 @@ def hydrate_env_from_secrets() -> None:
 
 def apply_key_overrides(openai_key: str, tavily_key: str) -> None:
     if openai_key.strip():
-        os.environ["OPENAI_API_KEY"] = openai_key.strip()
+        os.environ["GEMINI_API_KEY"] = openai_key.strip()
     if tavily_key.strip():
         os.environ["TAVILY_API_KEY"] = tavily_key.strip()
 
@@ -743,7 +743,7 @@ def render_sidebar() -> bool:
         tavily_override = st.text_input("Tavily API key", type="password", key="tavily_key_override")
         apply_key_overrides(openai_override, tavily_override)
 
-        openai_ready = key_is_ready("OPENAI_API_KEY")
+        openai_ready = key_is_ready("GEMINI_API_KEY")
         tavily_ready = key_is_ready("TAVILY_API_KEY")
         render_key_badge("OpenAI", openai_ready)
         render_key_badge("Tavily", tavily_ready)
