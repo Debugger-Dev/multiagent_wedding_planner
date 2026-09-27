@@ -1,0 +1,4 @@
+1. Analyze user constraints: Traditional Indian wedding, 8 Lakh INR budget, 200 guests.
+2. Delegate web search to SubAgents to research realistic cost breakdowns, venue options, catering costs, decor, and photography within this budget.
+3. Synthesize a comprehensive budget allocation and actionable wedding planning blueprint.
+4. Provide recommendations for venues, catering, attire, decor, photography, rituals, and cost-saving tips tailored to an 8 Lakh budget.
